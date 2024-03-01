@@ -16,6 +16,20 @@ public class Main {
             System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
         System.out.println("Задача №2");
+        int a = 0;
+        while (a < 10) {
+            a++;
+            System.out.print(a + " ");
+        }
+        System.out.println();
+        for (a = 10; a >= 1; a--) {
+            System.out.print(a + " ");
+        }
+        System.out.println("Задача №3");
+        int population = 12_000_000;
+        int birtRate = 17;
+        int deathRate = 8;
+        int year = 0;
 
     }
 }
