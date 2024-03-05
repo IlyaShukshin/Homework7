@@ -5,9 +5,8 @@ public class Main {
         int sum = 0;
         int month = 0;
         while (sum < 2_459_000) {
-            sum = sum + sum / 100 * 12;
             sum = sum + cash;
-            month = month + 1;
+            month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
         System.out.println("Задача №2");
@@ -25,15 +24,13 @@ public class Main {
         int birtRate = 17;
         int deathRate = 8;
         int year;
-        int allPopulation = 0;
         for (year = 2024; year <= 2034; year++) {
-            allPopulation = population / 1000 * (birtRate - deathRate);
-            population = allPopulation + population;
+            population = population + population / 1000 * (birtRate - deathRate);
             System.out.println("Год " + year + ", численность населения составляет " + population);
         }
         System.out.println("Задача №4");
         int deposit = 15000;
-        month = 1;
+        month = 0;
         int totalDeposit = 12_000_000;
         while (deposit <= totalDeposit) {
             deposit = deposit + deposit / 100 * 7;
@@ -42,7 +39,7 @@ public class Main {
         }
         System.out.println("Задача №5");
         deposit = 15000;
-        month = 1;
+        month = 0;
         totalDeposit = 12_000_000;
         while (deposit <= totalDeposit) {
             deposit = deposit + deposit / 100 * 7;
@@ -70,10 +67,9 @@ public class Main {
         int currentYear = 2024;
         int lastYears = currentYear - 200;
         int futurYears = currentYear + 100;
-        for (; lastYears < futurYears; lastYears++) {
-            if (lastYears % 79 == 0)
-                System.out.println(lastYears);
+        for (year = lastYears; year <= futurYears; year++) {
+            if (year % 79 == 0)
+                System.out.println(year);
         }
-        lastYears = lastYears + 79;
     }
 }
